@@ -22,14 +22,14 @@ export default function Footer() {
   return (
     <footer className="py-20 px-6 border-t border-white/5">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start md:items-center gap-12">
-        <div>
-          <a href="/" className="flex items-center gap-3 mb-6 group">
+        <div className="flex flex-col items-center md:items-start">
+          <a href="/" className="flex flex-col items-center gap-1 mb-6 group">
             <BrandLogo />
-            <div className="flex flex-col leading-none">
-              <span className="font-display font-black text-xl tracking-tighter">
+            <div className="flex flex-col leading-none items-center">
+              <span className="font-display font-black text-sm tracking-tighter uppercase">
                 WiseTech
               </span>
-              <span className="text-[10px] uppercase font-bold tracking-[0.3em] text-white/40 ml-0.5">
+              <span className="text-[8px] uppercase font-bold tracking-[0.3em] text-white/40">
                 Limited
               </span>
             </div>

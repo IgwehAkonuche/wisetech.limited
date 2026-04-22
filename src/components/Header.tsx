@@ -34,13 +34,13 @@ export default function Header() {
   return (
     <header className="fixed top-0 left-0 w-full z-50 px-6 py-4">
       <nav className="max-w-7xl mx-auto flex items-center justify-between glass rounded-2xl px-6 py-3">
-        <a href="/" className="flex items-center gap-3 group">
+        <a href="/" className="flex flex-col items-center gap-1 group py-1">
           <BrandLogo />
-          <div className="flex flex-col leading-none hidden sm:flex">
-            <span className="font-display font-black text-xl tracking-tighter">
+          <div className="flex flex-col leading-none items-center">
+            <span className="font-display font-black text-xs tracking-tighter uppercase">
               WiseTech
             </span>
-            <span className="text-[10px] uppercase font-bold tracking-[0.3em] text-white/40 ml-0.5">
+            <span className="text-[7px] uppercase font-bold tracking-[0.4em] text-white/40">
               Limited
             </span>
           </div>
