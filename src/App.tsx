@@ -6,6 +6,7 @@ import Portfolio from './components/Portfolio';
 import SuccessStories from './components/SuccessStories';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import WhatsAppBubble from './components/WhatsAppBubble';
 
 export default function App() {
   return (
@@ -20,6 +21,7 @@ export default function App() {
         <Contact />
       </main>
       <Footer />
+      <WhatsAppBubble />
     </div>
   );
 }

@@ -3,88 +3,154 @@ import { ExternalLink } from 'lucide-react';
 
 const projects = [
   { 
-    title: 'Beauty Webshop', 
-    category: 'E-commerce', 
-    image: 'https://images.unsplash.com/photo-1596462502278-27bfdc4033c8?auto=format&fit=crop&q=80&w=800',
-    tags: ['Shopify', 'UI/UX']
+    title: 'Haeyeson', 
+    category: 'Industrial Tech', 
+    url: 'https://haeyeson.com',
+    image: '/src/assets/images/haeyeson_hero_1779039495768.png',
+    description: 'Bespoke website design and development for a global leader in industrial technology, creating secure, connected, and efficient digital operational environments.',
+    tags: ['Industrial IoT', 'Security']
   },
   { 
-    title: 'Geophysical Mapping Pro', 
-    category: 'Scientific Tool', 
-    image: 'https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&q=80&w=800',
-    tags: ['Python', 'WebGL']
+    title: 'Geotech Energy', 
+    category: 'Energy Sector', 
+    url: 'https://geotechenergyng.com',
+    image: '/src/assets/images/geotech_hero_1779039513657.png',
+    description: 'Professional corporate website designed and managed for a geophysical and engineering firm in the energy sector.',
+    tags: ['Engineering', 'Corporate']
   },
   { 
-    title: 'Dropshipping HQ', 
-    category: 'E-commerce', 
-    image: 'https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&q=80&w=800',
-    tags: ['WooCommerce', 'Growth']
+    title: 'Ventrix Oilfield', 
+    category: 'Industrial Services', 
+    url: 'https://ventrixoilfield.com.ng',
+    image: '/src/assets/images/ventrix_hero_1779039529335.png',
+    description: 'Clean and functional website developed for an oilfield technical services and infrastructure provider.',
+    tags: ['Oil & Gas', 'Infrastructure']
   },
   { 
-    title: 'Borehole Survey Dashboard', 
-    category: 'Infrastructure', 
-    image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=800',
-    tags: ['React', 'Data Vis']
+    title: 'Borehole Water Drilling', 
+    category: 'Subsurface Exploration', 
+    url: '#',
+    image: '/src/assets/images/borehole_drilling_hero_1779039544259.png',
+    video: '/src/assets/borehole_drilling.mp4', // Assuming this is the path
+    description: 'Professional hydrogeological surveys and precision water drilling operations.',
+    tags: ['Hydrogeology', 'Water Systems']
   },
   { 
-    title: 'Luxury Real Estate', 
-    category: 'Web Design', 
-    image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=800',
-    tags: ['Branding', 'Design']
+    title: 'Advanced Log Interpretation', 
+    category: 'Data Analysis', 
+    url: '#',
+    image: '/src/assets/images/geophysical_analysis_work_1779100251528.png',
+    description: 'In-depth analysis of geophysical borehole data to identify subsurface formations and resource potential.',
+    tags: ['Petrophysics', 'Log Analysis']
   },
   { 
-    title: 'Environmental Monitor', 
-    category: 'Data Science', 
-    image: 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&q=80&w=800',
-    tags: ['API Integration']
+    title: 'Resistivity Mapping', 
+    category: 'Field Survey', 
+    url: '#',
+    image: '/src/assets/images/field_geophysical_survey_1779100269683.png',
+    description: 'Conducting site-specific electrical resistivity surveys for groundwater exploration and geological site characterization.',
+    tags: ['Geoelectrical', 'Resource Mapping']
+  },
+  { 
+    title: 'Magnetic Field Survey', 
+    category: 'Subsurface Exploration', 
+    url: '#',
+    image: '/src/assets/images/geophysical_field_instrument_1779100285457.png',
+    description: 'High-precision magnetic investigations for mineral exploration and structural geological mapping.',
+    tags: ['Magnetometry', 'Geophysics']
+  },
+  { 
+    title: 'Digitalize Business Processes', 
+    category: 'Digital Transformation', 
+    url: '#',
+    image: '/src/assets/images/business_digitization_service_1779101961665.png',
+    description: 'We transition traditional businesses into the digital era by modernizing legacy workflows with high-end, efficient, and scalable digital solutions.',
+    tags: ['Business Tech', 'Digitalization']
+  },
+  { 
+    title: 'Professional Website Training', 
+    category: 'Corporate Training', 
+    url: '#',
+    image: '/src/assets/images/web_development_training_workshop_1779101978430.png',
+    description: 'Empowering your team with hands-on web management and development skills. We offer tailored corporate training to help you master your digital assets.',
+    tags: ['Web Literacy', 'Team Growth']
   },
 ];
 
 export default function Portfolio() {
   return (
-    <section id="portfolio" className="py-32 px-6">
+    <section id="portfolio" className="section-padding bg-[var(--background-alt)]">
       <div className="max-w-7xl mx-auto">
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-8">
-          <div>
-            <h2 className="text-5xl font-extrabold mb-4">Selected <span className="text-white/40 italic">Works</span></h2>
-            <p className="text-white/60 max-w-xl">Showcasing a range of successful projects, from visually stunning e-commerce stores to intuitive industrial applications.</p>
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-32 gap-12">
+          <div className="space-y-6">
+            <h2 className="text-5xl md:text-7xl font-display font-extrabold tracking-tight">Selected Works</h2>
+            <p className="text-brand-gray/30 max-w-xl text-xl font-light leading-relaxed">Showcasing a range of successful projects across digital and scientific disciplines.</p>
           </div>
-          <button className="text-brand-magenta font-bold flex items-center gap-2 group">
-            View All Projects <ExternalLink className="w-4 h-4 group-hover:-translate-y-1 group-hover:translate-x-1 transition-transform" />
+          <button className="text-brand-cyan font-bold flex items-center gap-2 group border-b border-brand-cyan/20 pb-2 transition-all hover:gap-4 no-underline">
+            Browse all case studies <ExternalLink className="w-5 h-5" />
           </button>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-12">
           {projects.map((project, idx) => (
             <motion.div
               key={idx}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: idx * 0.1 }}
+              transition={{ duration: 1, delay: idx * 0.1, ease: [0.16, 1, 0.3, 1] }}
               viewport={{ once: true }}
-              className="group cursor-pointer"
+              className="group block"
             >
-              <div className="relative aspect-[4/5] overflow-hidden rounded-3xl mb-6">
-                <img 
-                  src={project.image} 
-                  alt={project.title} 
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-                />
-                <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                  <div className="p-4 glass rounded-full">
-                    <ExternalLink className="w-6 h-6" />
+              <a 
+                href={project.url}
+                target={project.url !== '#' ? "_blank" : undefined}
+                rel={project.url !== '#' ? "noopener noreferrer" : undefined}
+                className="cursor-pointer"
+              >
+                <div className="relative aspect-[16/10] overflow-hidden rounded-[2rem] mb-10 shadow-sm border border-brand-gray/[0.03] bg-brand-gray/5">
+                  {project.video ? (
+                    <video 
+                      src={project.video}
+                      poster={project.image}
+                      autoPlay
+                      muted
+                      loop
+                      playsInline
+                      className="w-full h-full object-cover transition-all duration-[1.5s] group-hover:scale-105"
+                    />
+                  ) : (
+                    <img 
+                      src={project.image} 
+                      alt={project.title} 
+                      className="w-full h-full object-cover transition-all duration-[1.5s] group-hover:scale-105"
+                    />
+                  )}
+                  <div className="absolute inset-0 bg-brand-gray/5 opacity-0 group-hover:opacity-100 transition-opacity" />
+                  <div className="absolute top-6 right-6 opacity-0 group-hover:opacity-100 transition-all transform translate-x-4 group-hover:translate-x-0">
+                    <div className="bg-white/90 backdrop-blur-md p-3 rounded-full shadow-lg">
+                      <ExternalLink className="w-5 h-5 text-brand-cyan" />
+                    </div>
                   </div>
                 </div>
-                <div className="absolute top-6 left-6 flex gap-2">
-                  {project.tags.map(tag => (
-                    <span key={tag} className="px-3 py-1 bg-black/60 backdrop-blur-md rounded-full text-[10px] font-bold uppercase tracking-wider text-white">
-                      {tag}
-                    </span>
-                  ))}
+              </a>
+              <div className="flex flex-col gap-3">
+                <div className="space-y-3">
+                  <p className="text-[12px] font-bold text-brand-cyan uppercase tracking-[0.3em]">{project.category}</p>
+                  <h3 className="text-3xl md:text-4xl font-display font-extrabold group-hover:text-brand-cyan transition-colors leading-tight">
+                    {project.title}
+                  </h3>
+                  <p className="text-brand-gray/80 font-normal leading-relaxed">
+                    {project.description}
+                  </p>
+                </div>
+                <div className="flex gap-3 pt-4">
+                   {project.tags.slice(0, 2).map(tag => (
+                      <span key={tag} className="text-[10px] font-bold uppercase tracking-[0.2em] text-brand-gray/60 border border-brand-gray/10 px-3 py-1 rounded-full">
+                         {tag}
+                      </span>
+                   ))}
                 </div>
               </div>
-              <p className="text-xs font-bold text-brand-magenta uppercase tracking-widest mb-1">{project.category}</p>
-              <h3 className="text-2xl font-bold group-hover:text-brand-magenta transition-colors">{project.title}</h3>
             </motion.div>
           ))}
         </div>

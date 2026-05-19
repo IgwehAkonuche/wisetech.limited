@@ -3,52 +3,67 @@ import { Quote } from 'lucide-react';
 
 const testimonials = [
   {
-    text: "WiseTech transformed our subsurface investigation workflow. Their custom data visualization platform saved us hundreds of man-hours.",
-    author: "Dr. Elena Vance",
-    role: "Lead Geologist, Apex Energy",
-    avatar: "https://i.pravatar.cc/150?u=elena"
+    text: "WiseTech transformed our digital presence with a bespoke website that perfectly reflects our industrial technology leadership. Their attention to detail and professional approach made the entire process seamless.",
+    author: "Management Team",
+    company: "Haeyeson",
+    role: "Global Industrial Tech Partner"
   },
   {
-    text: "The full-stack e-commerce solution WiseTech built for us saw a 300% increase in conversion rates within the first quarter.",
-    author: "Mark S.",
-    role: "CEO, GlowBeauty",
-    avatar: "https://i.pravatar.cc/150?u=mark"
+    text: "We needed a simple, professional corporate website that spoke to our expertise in the energy sector. WiseTech delivered exactly that, combined with excellent digital infrastructure management.",
+    author: "Technical Director",
+    company: "Geotech Energy",
+    role: "Engineering & Geophysical Solutions"
   },
   {
-    text: "Remarkable precision in their borehole surveys coupled with a modern digital reporting system. A truly unique agency.",
-    author: "James Harding",
-    role: "Environmental Consultant",
-    avatar: "https://i.pravatar.cc/150?u=james"
+    text: "They developed a clean, highly functional platform that effectively showcases our oilfield services. Their team understood our technical needs and translated them into a polished online presence.",
+    author: "Operations Manager",
+    company: "Ventrix Oilfield",
+    role: "Oilfield Technical Services"
   }
 ];
 
 export default function SuccessStories() {
   return (
-    <section className="py-32 px-6 relative overflow-hidden">
-      <div className="absolute top-0 right-0 w-96 h-96 bg-brand-magenta/5 rounded-full blur-3xl -z-10" />
-      
+    <section id="testimonials" className="section-padding bg-zinc-50 overflow-hidden">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-20">
-          <h2 className="text-5xl font-bold mb-4 italic text-white/40">Trusted by Professionals</h2>
-          <p className="text-white/60">Driving success across energy, retail, and tech industries.</p>
+        <div className="mb-24 flex flex-col md:flex-row md:items-end justify-between gap-8">
+          <div className="max-w-2xl">
+            <h2 className="text-4xl md:text-6xl font-serif font-bold text-brand-gray tracking-tight leading-tight">
+              What Our <span className="text-brand-cyan">Partners</span> Say
+            </h2>
+            <div className="w-20 h-1.5 bg-brand-cyan mt-6" />
+          </div>
+          <p className="text-brand-gray/60 font-medium max-w-sm">
+            Trusted by industry leaders in technology, energy, and technical services.
+          </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid lg:grid-cols-3 gap-8">
           {testimonials.map((t, idx) => (
             <motion.div
               key={idx}
-              whileHover={{ scale: 1.02 }}
-              className="glass p-10 rounded-[2rem] flex flex-col justify-between h-full border-white/5"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: idx * 0.1 }}
+              className="bg-white p-10 md:p-12 rounded-[2rem] border border-brand-gray/5 hover:border-brand-cyan/20 transition-all duration-500 flex flex-col justify-between group h-full shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)] hover:shadow-[0_20px_40px_-12px_rgba(0,0,0,0.08)]"
             >
-              <div className="mb-8">
-                <Quote className="w-10 h-10 text-brand-magenta/20 mb-6" />
-                <p className="text-xl font-medium leading-relaxed italic">"{t.text}"</p>
+              <div className="space-y-8">
+                <Quote className="w-12 h-12 text-zinc-100 group-hover:text-brand-cyan/10 transition-colors duration-500 fill-current" />
+                <p className="text-xl md:text-2xl font-serif italic text-brand-gray/80 leading-relaxed font-medium">
+                  "{t.text}"
+                </p>
               </div>
-              <div className="flex items-center gap-4 border-t border-white/5 pt-8">
-                <img src={t.avatar} alt={t.author} className="w-12 h-12 rounded-full border-2 border-brand-magenta" />
-                <div>
-                  <h4 className="font-bold">{t.author}</h4>
-                  <p className="text-xs text-white/40 uppercase tracking-widest font-bold">{t.role}</p>
+              
+              <div className="mt-12 pt-8 border-t border-zinc-100">
+                <div className="space-y-1">
+                  <h4 className="font-display font-bold text-lg text-brand-gray">{t.company}</h4>
+                  <div className="flex flex-col">
+                    <span className="text-sm font-semibold text-brand-cyan">{t.author}</span>
+                    <span className="text-[10px] text-brand-gray/40 uppercase tracking-widest font-bold mt-1">
+                      {t.role}
+                    </span>
+                  </div>
                 </div>
               </div>
             </motion.div>

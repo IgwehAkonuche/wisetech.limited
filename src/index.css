@@ -1,68 +1,57 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@300;400;500;600;700&family=Instrument+Serif:ital,wght@0,400;1,400&display=swap');
 @import "tailwindcss";
 
 @theme {
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
   --font-display: "Space Grotesk", sans-serif;
+  --font-serif: "Instrument Serif", serif;
   
-  --color-brand-magenta: #FF00FF;
-  --color-brand-purple: #A855F7;
-  --color-brand-indigo: #3702B2;
-  --color-brand-cyan: #0EA5E9;
-  --color-brand-accent: #00FF00;
+  --color-brand-cyan: #00ADEF;
+  --color-brand-gray: #333333;
+  --color-brand-light-gray: #F8F9FA;
   
-  --background-dark: #050505;
-  --background-card: rgba(255, 255, 255, 0.03);
-  --border-glass: rgba(255, 255, 255, 0.08);
+  --background-site: #FFFFFF;
+  --background-alt: #FBFBFC;
+  --border-muted: #F0F0F2;
 }
 
 @layer base {
   body {
-    @apply bg-[var(--background-dark)] text-white font-sans antialiased selection:bg-brand-magenta/30;
+    @apply bg-[var(--background-site)] text-[var(--color-brand-gray)] font-sans antialiased selection:bg-brand-cyan/20;
   }
   
   h1, h2, h3, h4, h5, h6 {
-    @apply font-display tracking-tighter;
+    @apply font-display tracking-tight text-brand-gray;
   }
 }
 
 @utility glass {
-  @apply backdrop-blur-xl bg-[var(--background-card)] border border-[var(--border-glass)];
+  @apply backdrop-blur-md bg-white/90 border border-white/40;
 }
 
 @utility text-gradient {
-  @apply bg-clip-text text-transparent bg-gradient-to-r from-brand-magenta via-brand-purple via-brand-indigo to-brand-cyan;
+  @apply text-brand-cyan;
 }
 
 @utility bg-gradient-brand {
-  @apply bg-gradient-to-tr from-brand-magenta via-brand-purple to-brand-indigo;
-}
-
-@utility bg-gradient-tech {
-  @apply bg-gradient-to-br from-brand-indigo via-black to-[var(--background-dark)];
-}
-
-@utility chevron-mask {
-  mask-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 20L60 50L30 80' stroke='black' stroke-width='10'/%3E%3C/svg%3E");
-  mask-size: contain;
-  mask-repeat: no-repeat;
+  @apply bg-brand-cyan;
 }
 
 @utility btn-primary {
-  @apply bg-gradient-brand text-white px-8 py-4 rounded-xl font-bold hover:brightness-110 transition-all transform hover:scale-105 active:scale-95 flex items-center gap-2;
+  @apply bg-brand-gray text-white px-8 py-4 font-semibold tracking-tight hover:bg-brand-cyan transition-all duration-300 rounded-full flex items-center justify-center gap-2;
 }
 
-@utility card-hover {
-  @apply transition-all duration-300 hover:border-brand-magenta/30 hover:bg-white/5;
+@utility section-padding {
+  @apply py-28 md:py-40 px-6 md:px-12;
 }
 
 /* Custom scrollbar */
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 6px;
 }
 ::-webkit-scrollbar-track {
   @apply bg-transparent;
 }
 ::-webkit-scrollbar-thumb {
-  @apply bg-white/10 rounded-full hover:bg-white/20 transition-colors;
+  @apply bg-gray-200 rounded-full hover:bg-gray-300 transition-colors;
 }

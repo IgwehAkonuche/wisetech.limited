@@ -18,57 +18,77 @@ const geophysicsServices = [
 
 export default function Services() {
   return (
-    <section id="services" className="py-32 px-6">
+    <section id="services" className="section-padding bg-white">
       <div className="max-w-7xl mx-auto">
-        <div className="mb-20 text-center">
-          <h2 className="text-5xl font-bold mb-4">Core <span className="text-gradient">Capabilities</span></h2>
-          <p className="text-white/40 max-w-2xl mx-auto">Providing cross-disciplinary expertise at the intersection of digital tech and earth science.</p>
+        <div className="mb-32 flex flex-col md:flex-row md:items-end justify-between gap-12">
+          <div className="space-y-6">
+            <h2 className="text-5xl md:text-7xl font-display font-extrabold tracking-tight">Services</h2>
+            <p className="text-brand-gray/70 max-w-xl text-xl leading-relaxed">Providing cross-disciplinary expertise at the intersection of digital tech and earth science.</p>
+          </div>
+          <div className="hidden md:block">
+            <div className="text-right">
+              <span className="text-[12px] font-bold uppercase tracking-[0.4em] text-brand-gray/40 block mb-1">Established</span>
+              <span className="text-lg font-display font-bold text-brand-gray/50">2014</span>
+            </div>
+          </div>
         </div>
 
-        <div className="space-y-24">
+        <div className="space-y-40">
           {/* Digital Services */}
-          <div>
-            <div className="flex items-center gap-4 mb-12">
-              <div className="h-px flex-1 bg-white/10" />
-              <h3 className="text-xs font-black uppercase tracking-[0.3em] text-white/40">Digital Consulting</h3>
-              <div className="h-px flex-1 bg-white/10" />
+          <div className="space-y-16">
+            <div className="flex items-center gap-6">
+               <h3 className="text-[13px] font-bold uppercase tracking-[0.3em] text-brand-gray/70 whitespace-nowrap">Digital Consulting</h3>
+               <div className="h-px w-full bg-brand-gray/10" />
             </div>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-x-16 gap-y-24">
               {digitalServices.map((service, idx) => (
                 <motion.div
-                  key={idx}
-                  whileHover={{ y: -5 }}
-                  className="glass p-8 rounded-3xl group hover:border-brand-magenta/50 transition-colors cursor-default"
+                   key={idx}
+                   initial={{ opacity: 0, y: 20 }}
+                   whileInView={{ opacity: 1, y: 0 }}
+                   viewport={{ once: true }}
+                   transition={{ duration: 1, delay: idx * 0.1, ease: [0.16, 1, 0.3, 1] }}
+                   className="group"
                 >
-                  <div className="w-12 h-12 rounded-2xl bg-brand-magenta/10 flex items-center justify-center mb-6 text-brand-magenta group-hover:bg-brand-magenta group-hover:text-white transition-all">
+                  <div className="mb-8 inline-flex p-4 rounded-2xl bg-brand-light-gray text-brand-cyan group-hover:bg-brand-cyan group-hover:text-white transition-all duration-500 transform group-hover:-translate-y-1">
                     <service.icon className="w-6 h-6" />
                   </div>
-                  <h4 className="text-xl font-bold mb-3">{service.title}</h4>
-                  <p className="text-sm text-white/40 leading-relaxed">{service.desc}</p>
+                  <h4 className="text-2xl md:text-3xl font-display font-extrabold mb-5 group-hover:text-brand-cyan transition-colors leading-tight">
+                    {service.title}
+                  </h4>
+                  <p className="text-brand-gray/80 leading-relaxed text-lg">
+                    {service.desc}
+                  </p>
                 </motion.div>
               ))}
             </div>
           </div>
 
           {/* geophysical Services */}
-          <div>
-            <div className="flex items-center gap-4 mb-12">
-              <div className="h-px flex-1 bg-white/10" />
-              <h3 className="text-xs font-black uppercase tracking-[0.3em] text-white/40">Geophysical Consulting</h3>
-              <div className="h-px flex-1 bg-white/10" />
+          <div className="space-y-16">
+            <div className="flex items-center gap-6">
+               <h3 className="text-[13px] font-bold uppercase tracking-[0.3em] text-brand-gray/70 whitespace-nowrap">Geophysical Consulting</h3>
+               <div className="h-px w-full bg-brand-gray/10" />
             </div>
-            <div className="grid md:grid-cols-3 gap-6">
+            <div className="grid md:grid-cols-3 gap-x-16 gap-y-24">
               {geophysicsServices.map((service, idx) => (
                 <motion.div
-                  key={idx}
-                  whileHover={{ y: -5 }}
-                  className="glass p-8 rounded-3xl group hover:border-brand-indigo/50 transition-colors cursor-default"
+                   key={idx}
+                   initial={{ opacity: 0, y: 20 }}
+                   whileInView={{ opacity: 1, y: 0 }}
+                   viewport={{ once: true }}
+                   transition={{ duration: 1, delay: idx * 0.1, ease: [0.16, 1, 0.3, 1] }}
+                   className="group"
                 >
-                  <div className="w-12 h-12 rounded-2xl bg-brand-indigo/10 flex items-center justify-center mb-6 text-brand-indigo group-hover:bg-brand-indigo group-hover:text-white transition-all">
+                  <div className="mb-8 inline-flex p-4 rounded-2xl bg-brand-light-gray text-brand-cyan group-hover:bg-brand-cyan group-hover:text-white transition-all duration-500 transform group-hover:-translate-y-1">
                     <service.icon className="w-6 h-6" />
                   </div>
-                  <h4 className="text-xl font-bold mb-3">{service.title}</h4>
-                  <p className="text-sm text-white/40 leading-relaxed">{service.desc}</p>
+                  <h4 className="text-2xl md:text-3xl font-display font-extrabold mb-5 group-hover:text-brand-cyan transition-colors leading-tight">
+                    {service.title}
+                  </h4>
+                  <p className="text-brand-gray/80 leading-relaxed text-lg">
+                    {service.desc}
+                  </p>
                 </motion.div>
               ))}
             </div>
