@@ -1,12 +1,22 @@
 import { motion } from 'motion/react';
 import { ExternalLink } from 'lucide-react';
 
+import haeyesonHero from '../assets/images/haeyeson_hero_1779039495768.png';
+import geotechHero from '../assets/images/geotech_hero_1779039513657.png';
+import ventrixHero from '../assets/images/ventrix_hero_1779039529335.png';
+import boreholeHero from '../assets/images/borehole_drilling_hero_1779039544259.png';
+import geoAnalysis from '../assets/images/geophysical_analysis_work_1779100251528.jpg';
+import fieldSurvey from '../assets/images/field_geophysical_survey_1779100269683.jpg';
+import fieldInstrument from '../assets/images/geophysical_field_instrument_1779100285457.jpg';
+import businessDigitization from '../assets/images/business_digitization_service_1779101961665.png';
+import webTraining from '../assets/images/web_development_training_workshop_1779101978430.png';
+
 const projects = [
   { 
     title: 'Haeyeson', 
     category: 'Industrial Tech', 
     url: 'https://haeyeson.com',
-    image: '/src/assets/images/haeyeson_hero_1779039495768.png',
+    image: haeyesonHero,
     description: 'Bespoke website design and development for a global leader in industrial technology, creating secure, connected, and efficient digital operational environments.',
     tags: ['Industrial IoT', 'Security']
   },
@@ -14,7 +24,7 @@ const projects = [
     title: 'Geotech Energy', 
     category: 'Energy Sector', 
     url: 'https://geotechenergyng.com',
-    image: '/src/assets/images/geotech_hero_1779039513657.png',
+    image: geotechHero,
     description: 'Professional corporate website designed and managed for a geophysical and engineering firm in the energy sector.',
     tags: ['Engineering', 'Corporate']
   },
@@ -22,7 +32,7 @@ const projects = [
     title: 'Ventrix Oilfield', 
     category: 'Industrial Services', 
     url: 'https://ventrixoilfield.com.ng',
-    image: '/src/assets/images/ventrix_hero_1779039529335.png',
+    image: ventrixHero,
     description: 'Clean and functional website developed for an oilfield technical services and infrastructure provider.',
     tags: ['Oil & Gas', 'Infrastructure']
   },
@@ -30,8 +40,7 @@ const projects = [
     title: 'Borehole Water Drilling', 
     category: 'Subsurface Exploration', 
     url: '#',
-    image: '/src/assets/images/borehole_drilling_hero_1779039544259.png',
-    video: '/src/assets/borehole_drilling.mp4', // Assuming this is the path
+    image: boreholeHero,
     description: 'Professional hydrogeological surveys and precision water drilling operations.',
     tags: ['Hydrogeology', 'Water Systems']
   },
@@ -39,7 +48,7 @@ const projects = [
     title: 'Advanced Log Interpretation', 
     category: 'Data Analysis', 
     url: '#',
-    image: '/src/assets/images/geophysical_analysis_work_1779100251528.png',
+    image: geoAnalysis,
     description: 'In-depth analysis of geophysical borehole data to identify subsurface formations and resource potential.',
     tags: ['Petrophysics', 'Log Analysis']
   },
@@ -47,7 +56,7 @@ const projects = [
     title: 'Resistivity Mapping', 
     category: 'Field Survey', 
     url: '#',
-    image: '/src/assets/images/field_geophysical_survey_1779100269683.png',
+    image: fieldSurvey,
     description: 'Conducting site-specific electrical resistivity surveys for groundwater exploration and geological site characterization.',
     tags: ['Geoelectrical', 'Resource Mapping']
   },
@@ -55,7 +64,7 @@ const projects = [
     title: 'Magnetic Field Survey', 
     category: 'Subsurface Exploration', 
     url: '#',
-    image: '/src/assets/images/geophysical_field_instrument_1779100285457.png',
+    image: fieldInstrument,
     description: 'High-precision magnetic investigations for mineral exploration and structural geological mapping.',
     tags: ['Magnetometry', 'Geophysics']
   },
@@ -63,7 +72,7 @@ const projects = [
     title: 'Digitalize Business Processes', 
     category: 'Digital Transformation', 
     url: '#',
-    image: '/src/assets/images/business_digitization_service_1779101961665.png',
+    image: businessDigitization,
     description: 'We transition traditional businesses into the digital era by modernizing legacy workflows with high-end, efficient, and scalable digital solutions.',
     tags: ['Business Tech', 'Digitalization']
   },
@@ -71,7 +80,7 @@ const projects = [
     title: 'Professional Website Training', 
     category: 'Corporate Training', 
     url: '#',
-    image: '/src/assets/images/web_development_training_workshop_1779101978430.png',
+    image: webTraining,
     description: 'Empowering your team with hands-on web management and development skills. We offer tailored corporate training to help you master your digital assets.',
     tags: ['Web Literacy', 'Team Growth']
   },
@@ -108,23 +117,11 @@ export default function Portfolio() {
                 className="cursor-pointer"
               >
                 <div className="relative aspect-[16/10] overflow-hidden rounded-[2rem] mb-10 shadow-sm border border-brand-gray/[0.03] bg-brand-gray/5">
-                  {project.video ? (
-                    <video 
-                      src={project.video}
-                      poster={project.image}
-                      autoPlay
-                      muted
-                      loop
-                      playsInline
-                      className="w-full h-full object-cover transition-all duration-[1.5s] group-hover:scale-105"
-                    />
-                  ) : (
-                    <img 
-                      src={project.image} 
-                      alt={project.title} 
-                      className="w-full h-full object-cover transition-all duration-[1.5s] group-hover:scale-105"
-                    />
-                  )}
+                  <img 
+                    src={project.image} 
+                    alt={project.title} 
+                    className="w-full h-full object-cover transition-all duration-[1.5s] group-hover:scale-105"
+                  />
                   <div className="absolute inset-0 bg-brand-gray/5 opacity-0 group-hover:opacity-100 transition-opacity" />
                   <div className="absolute top-6 right-6 opacity-0 group-hover:opacity-100 transition-all transform translate-x-4 group-hover:translate-x-0">
                     <div className="bg-white/90 backdrop-blur-md p-3 rounded-full shadow-lg">

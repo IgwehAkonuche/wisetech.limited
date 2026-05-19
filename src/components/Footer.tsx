@@ -1,10 +1,11 @@
 import { Facebook, Instagram, Send, Linkedin, Twitter } from 'lucide-react';
+import brandLogo from '../assets/images/wisetech_limited-logo2.jpg';
 
 export default function Footer() {
   const BrandLogo = () => (
     <div className="flex items-center gap-4 group">
       <img 
-        src="/src/assets/images/wisetech_limited-logo2.jpg" 
+        src={brandLogo} 
         alt="WiseTech Limited" 
         className="h-14 md:h-16 object-contain shrink-0 mix-blend-multiply" 
       />

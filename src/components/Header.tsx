@@ -1,6 +1,7 @@
 import { motion } from 'motion/react';
 import { Menu, X, ArrowRight } from 'lucide-react';
 import { useState } from 'react';
+import brandLogo from '../assets/images/wisetech_limited-logo2.jpg';
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -14,7 +15,7 @@ export default function Header() {
   const BrandLogo = () => (
     <div className="flex items-center gap-4 group">
       <img 
-        src="/src/assets/images/wisetech_limited-logo2.jpg" 
+        src={brandLogo} 
         alt="WiseTech Limited" 
         className="h-16 md:h-20 object-contain shrink-0 mix-blend-multiply" 
       />
