@@ -61,93 +61,110 @@ export default function Contact() {
 
   return (
     <section id="contact" className="section-padding bg-[var(--background-alt)]">
-      <div className="max-w-7xl mx-auto bg-white p-16 md:p-32 rounded-[4rem] shadow-sm border border-brand-gray/[0.03] relative overflow-hidden">
-        <div className="grid lg:grid-cols-5 gap-32 relative z-10">
-          <div className="lg:col-span-2 space-y-16">
-            <div className="space-y-8">
-              <h2 className="text-5xl md:text-7xl font-display font-extrabold leading-[1.1] tracking-tight text-brand-gray">
-                Let's start <br />
+      <div className="max-w-7xl mx-auto bg-white p-6 sm:p-12 md:p-20 lg:p-24 xl:p-32 rounded-[2rem] sm:rounded-[3rem] lg:rounded-[4rem] shadow-sm border border-brand-gray/[0.03] relative overflow-hidden">
+        <div className="grid lg:grid-cols-5 gap-12 sm:gap-16 lg:gap-24 xl:gap-32 relative z-10">
+          <div className="lg:col-span-2 space-y-8 sm:space-y-12 lg:space-y-16 text-center lg:text-left flex flex-col items-center lg:items-start">
+            <div className="space-y-4 sm:space-y-6 lg:space-y-8">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-display font-extrabold leading-[1.1] tracking-tight text-brand-gray">
+                Let's start <br className="hidden md:inline" />
                 something <span className="italic font-serif font-normal text-brand-cyan">extraordinary.</span>
               </h2>
-              <p className="text-brand-gray/40 text-2xl font-light leading-relaxed">
+              <p className="text-brand-gray/40 text-lg sm:text-xl xl:text-2xl font-light leading-relaxed">
                 Whether you have a complex geophysical challenge or a digital vision, we're ready to partner with you.
               </p>
             </div>
             
-            <div className="space-y-12">
-              <div className="flex items-center gap-8 group">
-                <div className="w-16 h-16 rounded-full border border-border-muted flex items-center justify-center text-brand-cyan group-hover:bg-brand-cyan group-hover:text-white transition-all duration-700">
-                  <Mail className="w-6 h-6" />
+            <div className="space-y-6 sm:space-y-8 lg:space-y-12 w-full flex flex-col items-center lg:items-start">
+              <div className="flex flex-col sm:flex-row items-center gap-3 sm:gap-8 group text-center sm:text-left w-full justify-center lg:justify-start">
+                <div className="w-12 h-12 sm:w-16 sm:h-16 rounded-full border border-border-muted flex items-center justify-center text-brand-cyan group-hover:bg-brand-cyan group-hover:text-white transition-all duration-700 shrink-0">
+                  <Mail className="w-5 h-5 sm:w-6 sm:h-6" />
                 </div>
-                <div className="space-y-1">
-                  <p className="text-[12px] uppercase font-bold tracking-[0.2em] text-brand-gray/20">Email</p>
-                  <a href="mailto:wisetechlimited@outlook.com" className="text-xl font-display font-bold text-brand-gray hover:text-brand-cyan transition-colors">wisetechlimited@outlook.com</a>
+                <div className="space-y-1 min-w-0">
+                  <p className="text-[10px] sm:text-[12px] uppercase font-bold tracking-[0.2em] text-brand-gray/20">Email</p>
+                  <a 
+                    href="mailto:wisetechlimited@outlook.com" 
+                    className="text-base sm:text-lg md:text-xl font-display font-bold text-brand-gray hover:text-brand-cyan transition-colors block truncate"
+                  >
+                    wisetechlimited@outlook.com
+                  </a>
                 </div>
               </div>
-              <div className="flex items-center gap-8 group">
-                <div className="w-16 h-16 rounded-full border border-border-muted flex items-center justify-center text-brand-cyan group-hover:bg-brand-cyan group-hover:text-white transition-all duration-700">
-                  <Phone className="w-6 h-6" />
+              <div className="flex flex-col sm:flex-row items-center gap-3 sm:gap-8 group text-center sm:text-left w-full justify-center lg:justify-start">
+                <div className="w-12 h-12 sm:w-16 sm:h-16 rounded-full border border-border-muted flex items-center justify-center text-brand-cyan group-hover:bg-brand-cyan group-hover:text-white transition-all duration-700 shrink-0">
+                  <Phone className="w-5 h-5 sm:w-6 sm:h-6" />
                 </div>
-                <div className="space-y-1">
-                  <p className="text-[12px] uppercase font-bold tracking-[0.2em] text-brand-gray/20">Phone</p>
-                  <a href="tel:+2348035084686" className="text-xl font-display font-bold text-brand-gray hover:text-brand-cyan transition-colors">+234 803 508 4686</a>
+                <div className="space-y-1 min-w-0">
+                  <p className="text-[10px] sm:text-[12px] uppercase font-bold tracking-[0.2em] text-brand-gray/20">Phone</p>
+                  <a 
+                    href="tel:+2348035084686" 
+                    className="text-base sm:text-lg md:text-xl font-display font-bold text-brand-gray hover:text-brand-cyan transition-colors block truncate"
+                  >
+                    +234 803 508 4686
+                  </a>
                 </div>
               </div>
             </div>
           </div>
 
           <div className="lg:col-span-3">
-            <form ref={formRef} onSubmit={handleSubmit} className="space-y-12">
-              <div className="grid md:grid-cols-2 gap-12">
-                <div className="space-y-4">
-                  <label className="text-[12px] uppercase font-bold tracking-[0.2em] text-brand-gray/60">Your Name</label>
+            <form ref={formRef} onSubmit={handleSubmit} className="space-y-8 sm:space-y-10 lg:space-y-12">
+              <div className="grid sm:grid-cols-2 gap-6 sm:gap-8 lg:gap-12">
+                <div className="space-y-3 sm:space-y-4">
+                  <label className="text-[11px] sm:text-[12px] uppercase font-bold tracking-[0.2em] text-brand-gray/60">Your Name</label>
                   <input 
                     type="text" 
                     name="user_name"
                     required
                     placeholder="Full Name" 
-                    className="w-full bg-transparent border-b border-brand-gray/20 pb-6 outline-none focus:border-brand-cyan transition-colors placeholder:text-brand-gray/30 font-display font-bold text-xl" 
+                    className="w-full bg-transparent border-b border-brand-gray/20 pb-4 md:pb-6 outline-none focus:border-brand-cyan transition-colors placeholder:text-brand-gray/30 font-display font-bold text-lg md:text-xl" 
                   />
                 </div>
-                <div className="space-y-4">
-                  <label className="text-[12px] uppercase font-bold tracking-[0.2em] text-brand-gray/60">Email Address</label>
+                <div className="space-y-3 sm:space-y-4">
+                  <label className="text-[11px] sm:text-[12px] uppercase font-bold tracking-[0.2em] text-brand-gray/60">Email Address</label>
                   <input 
                     type="email" 
                     name="user_email"
                     required
                     placeholder="example@domain.com" 
-                    className="w-full bg-transparent border-b border-brand-gray/20 pb-6 outline-none focus:border-brand-cyan transition-colors placeholder:text-brand-gray/30 font-display font-bold text-xl" 
+                    className="w-full bg-transparent border-b border-brand-gray/20 pb-4 md:pb-6 outline-none focus:border-brand-cyan transition-colors placeholder:text-brand-gray/30 font-display font-bold text-lg md:text-xl" 
                   />
                 </div>
               </div>
-              <div className="space-y-4">
-                <label className="text-[12px] uppercase font-bold tracking-[0.2em] text-brand-gray/60">Primary Interest</label>
-                <select 
-                  name="interest"
-                  className="w-full bg-transparent border-b border-brand-gray/20 pb-6 outline-none focus:border-brand-cyan transition-colors appearance-none font-display font-bold text-xl cursor-pointer text-brand-gray"
-                >
-                  <option value="Digital Infrastructure">Digital Infrastructure</option>
-                  <option value="Geophysical Survey">Geophysical Survey</option>
-                  <option value="Website Development">Website Development</option>
-                  <option value="Other Inquiry">Other Inquiry</option>
-                </select>
+              <div className="space-y-3 sm:space-y-4">
+                <label className="text-[11px] sm:text-[12px] uppercase font-bold tracking-[0.2em] text-brand-gray/60">Primary Interest</label>
+                <div className="relative">
+                  <select 
+                    name="interest"
+                    className="w-full bg-transparent border-b border-brand-gray/20 pb-4 md:pb-6 outline-none focus:border-brand-cyan transition-colors appearance-none font-display font-bold text-lg md:text-xl cursor-pointer text-brand-gray rounded-none"
+                  >
+                    <option value="Digital Infrastructure">Digital Infrastructure</option>
+                    <option value="Geophysical Survey">Geophysical Survey</option>
+                    <option value="Website Development">Website Development</option>
+                    <option value="Other Inquiry">Other Inquiry</option>
+                  </select>
+                  <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-2 text-brand-gray/40">
+                    <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                    </svg>
+                  </div>
+                </div>
               </div>
-              <div className="space-y-4">
-                <label className="text-[12px] uppercase font-bold tracking-[0.2em] text-brand-gray/60">Your Ambition</label>
+              <div className="space-y-3 sm:space-y-4">
+                <label className="text-[11px] sm:text-[12px] uppercase font-bold tracking-[0.2em] text-brand-gray/60">Your Ambition</label>
                 <textarea 
                   name="message"
                   required
                   placeholder="Tell us about your project goals..." 
                   rows={4} 
-                  className="w-full bg-transparent border-b border-brand-gray/20 pb-6 outline-none focus:border-brand-cyan transition-colors resize-none placeholder:text-brand-gray/30 font-display font-bold text-xl"
+                  className="w-full bg-transparent border-b border-brand-gray/20 pb-4 md:pb-6 outline-none focus:border-brand-cyan transition-colors resize-none placeholder:text-brand-gray/30 font-display font-bold text-lg md:text-xl"
                 ></textarea>
               </div>
               
-              <div className="pt-8 flex flex-col gap-6">
+              <div className="pt-4 sm:pt-6 md:pt-8 flex flex-col items-center sm:items-start gap-6">
                 <button 
                   type="submit"
                   disabled={isSubmitting}
-                  className="btn-primary rounded-full px-16 py-6 shadow-2xl shadow-brand-cyan/10 flex items-center justify-center gap-4 text-lg disabled:opacity-50 disabled:cursor-not-allowed group w-fit"
+                  className="btn-primary rounded-full px-8 sm:px-16 py-4 sm:py-6 shadow-2xl shadow-brand-cyan/10 flex items-center justify-center gap-4 text-base sm:text-lg disabled:opacity-50 disabled:cursor-not-allowed group w-full sm:w-fit"
                 >
                   {isSubmitting ? (
                     <>Processing <Loader2 className="w-5 h-5 animate-spin" /></>
@@ -160,10 +177,10 @@ export default function Contact() {
                   <motion.div 
                     initial={{ opacity: 0, x: -20 }}
                     animate={{ opacity: 1, x: 0 }}
-                    className="flex items-center gap-3 text-emerald-600 bg-emerald-50 px-6 py-4 rounded-2xl border border-emerald-100"
+                    className="flex items-center gap-3 text-emerald-600 bg-emerald-50 px-4 sm:px-6 py-3 sm:py-4 rounded-2xl border border-emerald-100 w-full sm:w-auto"
                   >
-                    <CheckCircle2 className="w-5 h-5" />
-                    <span className="font-bold">Initiative received! We'll reach out shortly.</span>
+                    <CheckCircle2 className="w-5 h-5 shrink-0" />
+                    <span className="font-bold text-sm sm:text-base">Initiative received! We'll reach out shortly.</span>
                   </motion.div>
                 )}
 
@@ -171,10 +188,10 @@ export default function Contact() {
                   <motion.div 
                     initial={{ opacity: 0, x: -20 }}
                     animate={{ opacity: 1, x: 0 }}
-                    className="flex items-center gap-3 text-rose-600 bg-rose-50 px-6 py-4 rounded-2xl border border-rose-100"
+                    className="flex items-center gap-3 text-rose-600 bg-rose-50 px-4 sm:px-6 py-3 sm:py-4 rounded-2xl border border-rose-100 w-full sm:w-auto"
                   >
-                    <AlertCircle className="w-5 h-5" />
-                    <span className="font-bold">Something went wrong. Please try again.</span>
+                    <AlertCircle className="w-5 h-5 shrink-0" />
+                    <span className="font-bold text-sm sm:text-base">Something went wrong. Please try again.</span>
                   </motion.div>
                 )}
               </div>

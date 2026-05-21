@@ -47,7 +47,7 @@ export default function Footer() {
       </div>
       
       <div className="max-w-7xl mx-auto mt-32 pt-12 border-t border-border-muted flex flex-col md:flex-row justify-between items-center gap-6 text-[10px] font-bold uppercase tracking-[0.3em] text-brand-gray/20">
-        <p>© 2026 WiseTech Limited. Measured in Lagos, Built for the World.</p>
+        <p>© 2026 WiseTech Limited. Measured in the Garden City of Port Harcourt, Built for the World.</p>
         <div className="flex gap-12">
           <a href="#" className="hover:text-brand-cyan transition-colors">Privacy</a>
           <a href="#" className="hover:text-brand-cyan transition-colors">Terms</a>
